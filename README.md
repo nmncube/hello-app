@@ -13,9 +13,12 @@ using Kubernetes Minikube.
 copy the following contents into app.py file
 
 from flask import Flask
+
 app = Flask(__name__)
 @app.route('/')
+
 def index():
-    return 'Hello World from Python!'
+   return 'Hello World from Python!'
+
 if __name__ == "__main__":
-    app.run()
+   app.run()
