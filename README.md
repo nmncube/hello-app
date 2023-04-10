@@ -25,22 +25,21 @@ if __name__ == "__main__":
    app.run()
 
 # Dockerfile
-Here we create a new directory named hello-app using the mkdir
-command. This directory will be the context for our Docker image. Context
-is the directory that contains all the files needed to successfully build an image:
+The Dockerfile contains instrauctions on how to build our Docker image.
 
 # From
-The FROM command is used to state what OS you intend to use as the base image. In this line we are inheriting our image from alpine 3.7 python image, As we will deploy a python app, so we have used alpine python image.
+The FROM command is used to state what OS we intend to use as the base image. In this line we are inheriting our image from alpine python image, As we will deploy a python app, so we have used alpine python image.
 
 # RUN
-
+pip install -r requirements.txt
+The RUN pip install will install the required libraties for our python app.
 
 # COPY
 To copy files from your Docker host to a Docker image, you can use the COPY command. We are copying all the files from our directory to docker images at /app
 
 
 # CMD
-Docker can run only one CMD command. Therefore, if you insert two or more CMD instructions, Docker would only run the last one i.e. the most recent one.
+Docker can run only one CMD command. The CMD will run a command to start our container once it is created.
 
 # Build Docker image
 Build a docker image and push to docker hub
