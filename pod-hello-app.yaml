@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-hello-app-def
+  labels:
+    app: hello-Python-app
+    tier: frontend
+spec:
+  containers:
+   -name: hello-app-container
+    image: nmncube/hello-app
